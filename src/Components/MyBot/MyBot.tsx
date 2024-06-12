@@ -12,8 +12,7 @@ const MyBot = () => {
 
     const defaultFlow: Flow = {
         start: {
-            message:
-                'Hello! I am Musty the Mustang, and I am here to assist you in navigating our website.',
+            message: 'Hello! I am Musty the Mustang, and I am here to assist you in navigating our website.',
             transition: {
                 duration: noInputTransitionTime,
                 interruptable: false
@@ -111,7 +110,7 @@ const MyBot = () => {
             flowStartTrigger: 'ON_LOAD',
             primaryColor: mustangGold,
             secondaryColor: mustangGreen,
-            showFooter: false,
+            showFooter: false
         },
         botBubble: {
             showAvatar: true,
