@@ -8,6 +8,12 @@ const MyBot = () => {
     const defaultTransitionTime: number = 1000;
     const noInputTransitionTime: number = 100;
 
+    const mustangGreen = '#33725A';
+    //const mustangGold = '#FFC022';
+    const mustangGold = '#FFB600';
+    const chatBotBGColor = '';
+    const mustyIconPath = "../../assets/MustyIcon.png";
+
     const defaultFlow: Flow = {
         start: {
             message:
@@ -105,8 +111,15 @@ const MyBot = () => {
         theme: {
             embedded: false,
             flowStartTrigger: 'ON_LOAD',
-            primaryColor: '#33725A',
-            secondaryColor: '#123456'
+            primaryColor: mustangGold,
+            secondaryColor: mustangGreen,
+            showFooter: false,
+        },
+        botBubble: {
+            avatar: mustyIconPath
+        },
+        chatButton: {
+            icon: mustyIconPath
         },
         isOpen: isOpen,
         audio: {
@@ -123,7 +136,7 @@ const MyBot = () => {
         header: {
             showAvatar: true,
             title: 'Musty the Mustang Bot',
-            avatar: '../assets/react.svg'
+            avatar: mustyIconPath
         },
         notification: {
             disabled: true
