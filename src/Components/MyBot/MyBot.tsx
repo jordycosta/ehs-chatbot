@@ -8,13 +8,12 @@ const MyBot = () => {
     const noInputTransitionTime: number = 100;
 
     const mustangGreen = '#33725A';
-    //const mustangGold = '#FFC022';
     const mustangGold = '#FFB600';
 
     const defaultFlow: Flow = {
         start: {
             message:
-                'Hello! I am Musty the Mustang, and I am here to assit you in navigating our website. Ask a question in the input field below or select one of our frequently asked questions.',
+                'Hello! I am Musty the Mustang, and I am here to assist you in navigating our website.',
             transition: {
                 duration: noInputTransitionTime,
                 interruptable: false
@@ -23,6 +22,7 @@ const MyBot = () => {
         },
 
         prompt: {
+            message: 'Ask a question in the input field below, or select one of our frequently asked questions.',
             options: ['Report an incident', 'Find a form', 'Talk to supervisor'],
             path: (params) => {
                 switch (params.userInput) {
