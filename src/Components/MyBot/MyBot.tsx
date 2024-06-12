@@ -1,18 +1,15 @@
-import { useState } from 'react';
 import ChatBot from 'react-chatbotify';
 import { Flow, Options } from 'react-chatbotify';
 
-const MyBot = () => {
-    const [isOpen, openWindow] = useState(false);
+import mustyIcon from '../../assets/MustyIcon.png';
 
+const MyBot = () => {
     const defaultTransitionTime: number = 1000;
     const noInputTransitionTime: number = 100;
 
     const mustangGreen = '#33725A';
     //const mustangGold = '#FFC022';
     const mustangGold = '#FFB600';
-    const chatBotBGColor = '';
-    const mustyIconPath = "../../assets/MustyIcon.png";
 
     const defaultFlow: Flow = {
         start: {
@@ -103,7 +100,8 @@ const MyBot = () => {
         },
 
         end: {
-            message: 'I hope I was helpful. I will be here to assist with any further questions.'
+            message: 'I hope I was helpful. I will be here to assist with any further questions.',
+            path: 'userGenQuestion'
         }
     };
 
@@ -116,12 +114,13 @@ const MyBot = () => {
             showFooter: false,
         },
         botBubble: {
-            avatar: mustyIconPath
+            showAvatar: true,
+            avatar: mustyIcon
         },
         chatButton: {
-            icon: mustyIconPath
+            icon: mustyIcon
         },
-        isOpen: isOpen,
+        isOpen: false,
         audio: {
             disabled: false,
             defaultToggledOn: false,
@@ -134,9 +133,9 @@ const MyBot = () => {
             blockSpam: true
         },
         header: {
-            showAvatar: true,
+            showAvatar: false,
             title: 'Musty the Mustang Bot',
-            avatar: mustyIconPath
+            avatar: mustyIcon
         },
         notification: {
             disabled: true
